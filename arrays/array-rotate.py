@@ -24,6 +24,7 @@ def main():
     arr = [int(x) for x in raw_input().split(' ')]
     k = int(raw_input("Rotate by:"))
     n = len(arr)
+    k = k % n 
     do_reverse(0, n-k-1, arr)
     do_reverse(n-k, n-1, arr)
     do_reverse(0, n-1, arr)
