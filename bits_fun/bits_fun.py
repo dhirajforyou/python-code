@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # faster computations are not always better, as you make cpu to word hard
-# bits and bytes are the one hidden shortcuts to take out that hardness
+# bits and bytes are some hidden shortcuts to take out that hardness
 
 
 
