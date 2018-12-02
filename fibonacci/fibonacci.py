@@ -5,6 +5,13 @@
 
 import sys
 import time
+import math
+
+# direct formula based implementation
+def formula_based(num):
+    golden_ratio = (1 + math.sqrt(5))/2
+    val = (golden_ratio**num - (1 - golden_ratio)**num)/ math.sqrt(5)
+    return int(round(val))
 
 # single loop implementation
 def single_loop(num):
@@ -58,6 +65,11 @@ def memoized_fibonacci(num):
 def main(args):
     i = input("Enter x for finding Fibonacci(x) \n")
     i = int(i)
+
+    start = time.time()
+    res = formula_based(i)
+    time_taken = time.time() - start
+    print res, "using formula, time taken", time_taken
 
     start = time.time()
     res = single_loop(i)
