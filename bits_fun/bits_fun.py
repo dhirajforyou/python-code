@@ -7,8 +7,10 @@
 
 # 1 << n, this is bitwise left shift by n bits
 # so 1 << 2 is 100 which is 4
+# also after left shift, every bit is shifted to left and blank position is replaced by 0, Since every bit is power of 2, with each shift every bit, number is getting dubbled or its getting multiplied by 2 :)
 # 1 >> n, this is bitwise right shift by n bits
 # so 16 >> 2 is 00100 which is 4
+# also after right shift, every bit is shifted right and sign bit is placed at empty position. so sign bit 0 in case of positive and signbit 1 in case of negative sign. with every right shift, every bit value is reduced by factor oof 2, which is equivalent to dividing. and ultimately the whole number is getting divided by 2 with each shift
 # 1 is 0000 0001, so ~1 is 1111 1110
 
 import sys
