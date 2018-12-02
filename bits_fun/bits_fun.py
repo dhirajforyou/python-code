@@ -33,6 +33,19 @@ def mask_from_msb(pos):
 def clear_bits_from_msb(num, pos):
     return num & mask_from_msb(pos)
     
+def countSetBits(num):
+    ct = 0
+    while num >0:
+        print num
+        num &= (num -1) 
+        print num
+        ct += 1;
+    return ct
+
+def isPowerOf2(num):
+    ret = num & ~(num & (num-1))
+    return ret == num
+
 def main(args):
     num = input("Enter number\n")
     num = int(num)
@@ -41,6 +54,8 @@ def main(args):
     print "after clearing 4 pos from lsb ", cleared_lsb, " which is in bin", bin8(cleared_lsb)
     cleared_msb  = clear_bits_from_msb(num, 4)
     print "after clearing 4 pos from msb ", cleared_msb, " which is in bin", bin8(cleared_msb)
+    print "setbits in", num," are ", countSetBits(num)
+    print "Is ", num," power of 2 ? ", isPowerOf2(num)
     print "start coding..."
 
 
